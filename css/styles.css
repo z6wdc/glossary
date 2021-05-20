@@ -1,0 +1,18 @@
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+}
+
+th,td {
+    border: solid 1px;
+}
+
+.header {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 2rem;
+}
+
+.item {
+    font-size: 2rem;
+}
