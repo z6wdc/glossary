@@ -2,4 +2,4 @@
 
 ## Categories
 
-- [Statistics](./statistics.html)
+- [Statistics](https://z6wdc.github.io/glossary/statistics.html)
