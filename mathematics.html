@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+            <table>
+                <tr>
+                    <th class="header">en</th>
+                    <th class="header">jp</th>
+                    <th class="header">tw</th>
+                </tr>
+                <tr v-for="term in terms">
+                    <th class="item">{{ term.en }}</th>
+                    <th class="item">{{ term.jp }}</th>
+                    <th class="item">{{ term.tw }}</th>
+                </tr>
+            </table>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                terms: []
+            },
+            mounted(){
+                fetch('./mathematics.json')
+                .then(res => res.json())
+                .then(terms => this.terms = terms);
+            }
+        })
+    </script>
+</body>
+</html>
